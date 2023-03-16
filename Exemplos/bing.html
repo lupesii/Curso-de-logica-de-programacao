@@ -1,0 +1,33 @@
+<script>
+const board = [
+  ['', '', ''],
+  ['', '', ''],
+  ['', '', '']
+];
+
+let currentPlayer = 'X';
+
+function makeMove(x, y) {
+  if (board[x][y] !== '') {
+    return;
+  }
+
+  board[x][y] = currentPlayer;
+  currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+}
+
+function printBoard() {
+  for (let i = 0; i < 3; i++) {
+    console.log(board[i].join(' | '));
+    if (i !== 2) {
+      console.log('---------');
+    }
+  }
+}
+
+printBoard();
+makeMove(0, 0);
+printBoard();
+makeMove(1, 1);
+printBoard();
+</script>
