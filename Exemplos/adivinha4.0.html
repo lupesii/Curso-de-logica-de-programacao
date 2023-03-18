@@ -1,0 +1,68 @@
+<meta charset="UTF-8">
+<input/>
+<button>Acertou o valor?</button>
+<script>
+    function sorteiaNumeros(quantidade){
+
+        var numeros = [];
+        var contador = 0;
+
+        while(contador < quantidade){
+            
+            var repete = false;
+            var numeroAleatorio = Math.round(Math.random() * 10);
+
+            if(numeroAleatorio !== 0){
+
+                for(var i = 0; i < numeros.length; i++){
+                
+                    if(numeroAleatorio == numeros[i]){
+                        repete = true;
+                        break;
+                    }    
+                }
+                
+                if(repete == false){
+                    numeros.push(numeroAleatorio);
+                    contador++;
+                }
+            }
+        }
+        
+        return numeros;
+    }
+
+    var numeros = sorteiaNumeros(3);
+    console.log(numeros);
+
+    var input = document.querySelector("input");
+    input.focus();
+
+    function verificaBotao() {
+
+        var achou = false;
+        
+        for(var i = 0; i < numeros.length; i++){
+
+            if(input.value == numeros[i]){
+
+                alert("Parabéns, você acertou o número!");
+                achou = true;
+                break;
+            }
+
+        }
+
+        if(achou == false){
+
+            alert("Infelizmente, você errou o número");
+
+        }
+
+        input.value = "";
+        input.focus();
+    }
+    var button = document.querySelector("button");
+    button.onclick = verificaBotao;
+
+</script>
