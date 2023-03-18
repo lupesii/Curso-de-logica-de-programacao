@@ -1,0 +1,17 @@
+<meta charset="UTF-8">
+<script>
+    function pulaLinha(){
+        document.write("<br><br>");
+    }
+    function mostra(frase){
+        document.write("<strong>" + frase + "</strong>");
+        pulaLinha();
+    }
+
+    for(var multiplicador = 1; multiplicador <= 10; multiplicador ++){
+        var resultado = multiplicador * 7;
+        mostra("7 x " + multiplicador + " é igual à " + resultado);
+    }
+    
+    mostra("FIM");
+</script>

@@ -11,12 +11,30 @@
         return Math.round(Math.random() * n);
     }
     var numero = sorteia(10)
-    var chute = parseInt(prompt("Digite um número de 1 a 10"));
-    console.log(sorteia);
+    console.log(numero);
+    var limiteTentativas = 3;
 
-    if(chute == numero){
-        mostra("Parabén, acertou o número");
-    }else{
-        mostra("Infelizmente você errou o número, o número era: " + numero);
+    for(var tentativas = 1; tentativas <= limiteTentativas; tentativas++){
+
+        var chute = parseInt(prompt("Digite um número de 1 a 10"));
+
+        if(chute == numero){
+        
+        mostra("Parabéns, acertou o número");
+        break;
+        
+        } else {
+
+            if(tentativas == limiteTentativas){
+                mostra("Infelizmente você execeu o número máximo de tentativas");
+            } else {
+                mostra("Infelizmente você errou o número");              
+            }
+        
+        }
+
+
+
+
     }
 </script>

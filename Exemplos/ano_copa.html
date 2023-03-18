@@ -1,0 +1,18 @@
+<meta charset="UTF-8">
+<script>
+    function pulaLinha(){
+        document.write("<br><hr><br>");
+    }
+    function mostra(frase){
+        document.write("<strong>" + frase + "</strong>");
+        pulaLinha();
+    }
+    
+    var ano = parseInt(prompt("Até que ano você deseja consultar?"))
+    var ano_copa = 1930;
+
+    while(ano_copa <= ano){
+        mostra("Os anos que tiveram copa são: " + ano_copa);
+        ano_copa = ano_copa + 4;
+    }
+</script>
