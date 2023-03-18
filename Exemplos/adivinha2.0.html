@@ -1,0 +1,21 @@
+<meta charset="UTF-8">
+<input/>
+<button>Chute um número</button>
+<script>
+    var numero = Math.round(Math.random() * 10);
+    var input = document.querySelector("input");
+    input.focus();
+
+    function verificaBotao(){
+        if(input.value == numero){
+        alert("Parabéns, você acertou!");
+        } else {
+        alert("Infelizmente, você está errado. Tente de novo");
+        }
+        input.value = "";
+        input.focus();
+    }
+
+    var button = document.querySelector("button");
+    button.onclick = verificaBotao;
+</script>
