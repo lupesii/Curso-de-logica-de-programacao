@@ -1,5 +1,4 @@
-# Curso de Lógica de programação
- [JavaScript e HTML: desenvolva um jogo e pratique lógica de programação JavaScript e HTML: desenvolva um jogo e pratique lógica de programação](https://cursos.alura.com.br/course/logica-programacao-javascript-html)
+# [Curso de Lógica de programação](https://cursos.alura.com.br/course/logica-programacao-javascript-html) 
  
 ### O que esse curso oferece de aprendizagem
 - Dê seus primeiros passos de maneira prática!
